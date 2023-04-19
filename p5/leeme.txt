@@ -1,0 +1,1 @@
+el ejercicio va por el apartado 4  el apartado 1 y 3 realmente hayq ue copiarlo de la guia y cambiar los numeros a 8 y luego a 13 downto 0 y 4 downto 0
