@@ -37,7 +37,7 @@ entity teclado is
        PS2DATA: in std_logic;
        rst: in std_logic;
        leds: out std_logic_vector (7 downto 0);
-       special: out std_logic
+       newkey: out std_logic
    );
 end teclado;
 
@@ -57,7 +57,7 @@ begin
     end if;  
 end process;
 
-special <= '1' when save(8 downto 1) = "11110000" else
+newkey <= '1' when save(8 downto 1) = "11110000" else
             '0';
 
 leds <= save(19 downto 12);

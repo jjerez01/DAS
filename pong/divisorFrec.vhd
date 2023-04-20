@@ -34,25 +34,26 @@ use IEEE.NUMERIC_STD.ALL;
 entity divisorFrec is
   Port (
     rst, clk: in std_logic;
+    valormax: std_logic_vector(27 downto 0);
     clkOUT: out std_logic
    );
 end divisorFrec;
 
 architecture Behavioral of divisorFrec is
-    -- valorMax <= x"60000000"
-    signal cuenta: std_logic_vector(25 downto 0);
+    -- valormax <= x"60000000"
+    signal cuenta: std_logic_vector(27 downto 0);
     signal enciende: std_logic;
 begin
-
+    
     divisor: process (rst,clk) begin
         if(rst = '1') then
             cuenta <= (others => '0');
+            enciende <= '0';
         elsif (rising_edge(clk)) then
-            if(cuenta = "10111110101111000010000000") then
-                enciende <= '1';
+            if(cuenta = valormax) then
+                enciende <= not enciende;
                 cuenta <= (others => '0');
             else
-                enciende <= '0';
                 cuenta <= cuenta + 1;
             end if;
         end if;
