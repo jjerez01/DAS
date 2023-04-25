@@ -1,0 +1,9 @@
+Mi proyecto opcional libre consiste de una implementacion del trabajo final que consiste en
+ poner una opción para congelar la pantalla y que ni la pelota ni la barra se muevan.
+
+si en el teclado le das a la letra p se "pausa" el juego y si le das a la r se "renauda" el juego.
+
+este proyecto lo he conseguido implementando un estado adicional a la maquina de estados de la pelota
+y de la barra llamado pausa. en la pelota ademas he tenido que añadir un registro para que almacenase
+una señal que indica a que estado deberia de ir la pelota despues de renaudar el juego para que la 
+pelota "se acuerde" de la direccion que tomo anteriormente.
